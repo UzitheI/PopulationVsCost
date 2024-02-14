@@ -8,5 +8,5 @@
 <p>Run the Command</p>
 <blockquote style="padding:15px">python3 gd.py</blockquote>
 <h2>PREVIEW</h2>
-<video width="700" height="700" controls src="./vid.mp4" type="video/mp4"/>
+<video width="500" height="500" controls src="./vid.mp4" type="video/mp4"/>
 
