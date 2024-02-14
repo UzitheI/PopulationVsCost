@@ -43,40 +43,40 @@ def compute_cost(x,y,w,b):
 initial_w=2
 initial_b=1
 
-# cost =compute_cost(x_train,y_train,initial_w,initial_b)
-# print(type(cost))
-# print(f'Cost at initial w: {cost:.3f}')
-# # compute_cost_test(compute_cost)
+cost =compute_cost(x_train,y_train,initial_w,initial_b)
+print(type(cost))
+print(f'Cost at initial w: {cost:.3f}')
+# compute_cost_test(compute_cost)
 
-# def compute_gradient(x,y,w,b):
-#     m=x.shape[0]
-#     dj_dw=0
-#     dj_db=0
-#     for i in range(m):
-#         f_wb= w*x[i]+b
-#         cost=f_wb-y[i]
-#         cost2=f_wb-y[i]
-#         cost2=cost2*x[i]
-#         dj_db=dj_db+cost
-#         dj_dw=dj_dw+cost2
-#     dj_db=(1/m)*dj_db
-#     dj_dw=(1/m)*dj_dw
+def compute_gradient(x,y,w,b):
+    m=x.shape[0]
+    dj_dw=0
+    dj_db=0
+    for i in range(m):
+        f_wb= w*x[i]+b
+        cost=f_wb-y[i]
+        cost2=f_wb-y[i]
+        cost2=cost2*x[i]
+        dj_db=dj_db+cost
+        dj_dw=dj_dw+cost2
+    dj_db=(1/m)*dj_db
+    dj_dw=(1/m)*dj_dw
 
-#     return dj_dw,dj_db
+    return dj_dw,dj_db
 
-# initial_w = 0
-# initial_b = 0
+initial_w = 0
+initial_b = 0
 
-# tmp_dj_dw, tmp_dj_db = compute_gradient(x_train, y_train, initial_w, initial_b)
-# print('Gradient at initial w, b (zeros):', tmp_dj_dw, tmp_dj_db)
+tmp_dj_dw, tmp_dj_db = compute_gradient(x_train, y_train, initial_w, initial_b)
+print('Gradient at initial w, b (zeros):', tmp_dj_dw, tmp_dj_db)
 
-# compute_gradient_test(compute_gradient)
+compute_gradient_test(compute_gradient)
 
-# # test_w = 0.2
-# # test_b = 0.2
-# # tmp_dj_dw, tmp_dj_db = compute_gradient(x_train, y_train, test_w, test_b)
+# test_w = 0.2
+# test_b = 0.2
+# tmp_dj_dw, tmp_dj_db = compute_gradient(x_train, y_train, test_w, test_b)
 
-# # print('Gradient at test w, b:', tmp_dj_dw, tmp_dj_db)
+# print('Gradient at test w, b:', tmp_dj_dw, tmp_dj_db)
 
 # def gradient_descent(x, y, w_in, b_in, cost_function, gradient_function, alpha, num_iters): 
 #     # number of training examples
