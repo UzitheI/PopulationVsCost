@@ -23,8 +23,8 @@ print('The number of training examples are :',len(x_train))
 #now drawing a scatter plot to visualize the data
 
 plt.scatter(x_train,y_train,marker='*',c='r')
-plt.title("Profits vs. Population per city")
-plt.ylabel('Profit in $10,000')
+plt.title("Cost vs. Population per city")
+plt.ylabel('Cost in $10,000')
 plt.xlabel('Population of city in 10,000s')
 plt.show()
 
@@ -135,9 +135,9 @@ plt.plot(x_train, predicted, c = "b")
 plt.scatter(x_train, y_train, marker='x', c='r') 
 
 # Set the title
-plt.title("Profits vs. Population per city")
+plt.title("Cost vs. Population per city")
 # Set the y-axis label
-plt.ylabel('Profit in $10,000')
+plt.ylabel('Cost in $10,000')
 # Set the x-axis label
 plt.xlabel('Population of City in 10,000s')
 
@@ -148,6 +148,7 @@ print('Here, we can now see a graph that shows the best linear fit for the model
 print('Now we can make essential predictions with the help of the model')
 
 print('Give an appropriate value,ie 3.5=35000 or 1=10000')
+print('------------------Make sure that the value is less than 22 (DataSet Restrictions)-----------------')
 population=float(input())
 predict = population * w + b
-print('For population',population,' we predict a profit of $%.2f' % (predict*10000))
+print('For population',population,' we predict a living cost of $%.2f' % (predict*10000))
